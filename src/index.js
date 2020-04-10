@@ -17,6 +17,8 @@ import rootReducer from './reducers/index';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ||
 compose;
 
+// every time we update something in our store, this reducer below returns our updated state
+// anytime something is dispatched, we want THAT action object to be sent to this reducer which will then update the store.
 const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
 
 // give app access to the store
