@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-class App extends React.Component {
+class App extends Component {
 
   // testing to see if I can fetch data from the back end 
   // success! fetched my array of 2 objects! too cool!
@@ -13,8 +13,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        App
+      <div>
+        <Main />
       </div>
     );
   }
