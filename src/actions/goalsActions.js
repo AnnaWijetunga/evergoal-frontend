@@ -1,15 +1,10 @@
 // a function
 // what we return or dispatch is an actionObject
 
-// export function fetchGoals() {
-
-//     // briefly bring back our componentDidMount from before for testing
-
-// }
-
 const goalsURL = "/api/goals";
 
-// fetch goal and fetch goals
+// fetch all goals
+// thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
 export const fetchGoals = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
@@ -19,5 +14,18 @@ export const fetchGoals = () => {
     }
 }
 
+// fetch a particular goal by id
+export const fetchGoal = id => {
+    return (dispatch) => {
+        dispatch({type: 'LOADING_GOALS'})
+            return fetch(`${goalsURL}/${id}`)
+                .then(response => response.json())
+                .then(goal => dispatch({type: 'FETCH_GOAL', payload: goal}))
+    }
+}
 
+// create new goal
+
+
+// delete goal
 
