@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-
+import NavBar from '../components/Navbar';
 import { Route } from 'react-router-dom';
-// import Home
-// import GoalInput
+import Home from '../components/Home';
+import GoalInput from '../components/Goals/GoalInput';
 import GoalsContainer from './GoalsContainer';
 import ObjectivesContainer from './ObjectivesContainer';
-// import MainHeader
+import MainHeader from '../components/MainHeader';
 // import { Container, Header }
 
 class Main extends Component {
