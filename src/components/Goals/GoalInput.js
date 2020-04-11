@@ -7,10 +7,10 @@ import { connect } from 'react-redux';
 class GoalInput extends Component {
     
     // correct syntax here?
-    // state = {
-    //     aim: "",
-    //     strategy: ""
-    // }
+    state = {
+        aim: "",
+        strategy: ""
+    }
 
     render() {
         return(
