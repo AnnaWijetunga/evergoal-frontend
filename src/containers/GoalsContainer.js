@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
-// will need to import other files here
-// import Goals
-// import GoalsInput
+import Goals from '../components/Goals/Goals';
+import GoalInput from '../components/Goals/GoalInput';
 import { connect } from 'react-redux';
 import { fetchGoals, deleteGoal } from '../actions/goalsActions';
-// import { Container }
-// import GoalsHeader
+import { Container } from 'semantic-ui-react';
+import GoalsHeader from '../components/Goals/GoalsHeader';
 
-class GoalsContainer extends Compoent {
+class GoalsContainer extends Component {
 
-    // 
     componentDidMount(){
         this.props.fetchGoals()
     }
 
-    // will need to fill out our return
     render() {
         return(
-            // may need our styling here
-            <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} />
-        
+            <Container>
+                <GoalsHeader />
+                <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} />
+                <GoalInput />
+            </Container>
         )
     }
 }
