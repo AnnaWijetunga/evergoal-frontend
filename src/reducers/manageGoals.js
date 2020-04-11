@@ -11,19 +11,22 @@ export default function goalsReducer(state = {
     goalData: []
     }, action){
 
-        // have to complete the return
         switch(action.type){
             case 'CREATE_GOAL':
                 console.log('creating', action.payload)
-                return { }
+                return {...state, goalsData:[...state.goalsData, action.payload]}
             case 'LOADING_GOALS':
                 console.log("loading goals here")
-                return { }
+                return {...state, loading: true}
             case 'FETCH_GOALS':
                 console.log("fetching goals")
-                return { }
+                return {...state, loading: false, goalsData: action.payload}
+            case 'FETCH_GOAL':
+                console.log("fetching 1 goal")
+                return {...state, loading: false, goalData: action.payload}
             case 'DELETE_GOAL':
                 console.log("in reducer, deleting", action.payload)
+                return {...state, loading: false, goalsData: state.goalsData.filter(goal => goal.id !== action.payload.id)}
             default:
                 console.log("default case in goals reducer")
                 return state;
