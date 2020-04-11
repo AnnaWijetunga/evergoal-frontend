@@ -17,7 +17,9 @@ class GoalsContainer extends Compoent {
     // will need to fill out our return
     render() {
         return(
-
+            // may need our styling here
+            <Goals goals={this.props.goals} deleteGoal={this.props.deleteGoal} />
+        
         )
     }
 }
