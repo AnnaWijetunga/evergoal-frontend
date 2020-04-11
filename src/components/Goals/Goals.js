@@ -1,6 +1,8 @@
 // functional component
 // just needs a return, not a render
 
+// will return a list of all goals
+
 import React from 'react';
 import Goal from './Goal';
 import { Container } from 'semantic-ui-react';
