@@ -6,19 +6,19 @@ export default function objectivesReducer(state = {
     switch(action.type){
         case 'FETCH_OBJECTIVES':
             console.log("fetching objectives", action.payload)
-            return
+            return {...state, objectivesData: action.payload.objectives}
         case 'LOADING_OBJECTIVES':
             console.log("now loading goals")
-            return 
+            return {...state, loading: true}
         case 'CREATE_OBJECTIVE':
             console.log("create objective", action.payload)
-            return 
+            return {...state, objectivesData:[...state.objectivesData, action.payload.objectve]}
         case 'DELETE_OBJECTIVE':
             console.log("deleting objective", action.payload)
-            return
-        case 'TOGGLE_COMPLETE_OBJECTIVE'
+            return {...state, loading: false, objectivesData: state.objectivesData.filter(objective => objective.id !== action.payload.id)}
+        case 'TOGGLE_COMPLETED_OBJECTIVE':
             console.log("toggling complete objective")
-            return
+            return {...state, objectivesData: [...state.objectivesData.map(objective => objective.id === action.payload.id ? {...objective, completed: !objective.completed} : objective)]}
         default:
             console.log("default case in objective reducer")
             return state;
