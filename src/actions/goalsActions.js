@@ -25,10 +25,27 @@ export const fetchGoal = id => {
 }
 
 // create new goal
-
+export const addGoal = goalInput => {
+    let data = {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(goalInput)
+    }
+    return dispatch => {
+        fetch(`${ goalsURL }`, data)
+        .then(response => response.json())
+        .then(goal => dispatch({
+            type: 'CREATE_GOAL',
+            payload: goal 
+        }))
+        .catch(err => err)
+    }
+}
 
 // delete goal
-
 
 
 // Reminder of fetch requests:
