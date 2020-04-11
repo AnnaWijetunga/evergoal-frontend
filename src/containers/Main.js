@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import NavBar from '../components/Navbar';
 import { Route } from 'react-router-dom';
-import Home from '../components/Home';
-import GoalInput from '../components/Goals/GoalInput';
-import GoalsContainer from './GoalsContainer';
-import ObjectivesContainer from './ObjectivesContainer';
+// import Home from '../components/Home';
+// import GoalInput from '../components/Goals/GoalInput';
+// import GoalsContainer from './GoalsContainer';
+// import ObjectivesContainer from './ObjectivesContainer';
 import MainHeader from '../components/MainHeader';
-// import { Container, Header }
+import { Container, Header } from 'semantic-ui-react';
 
 class Main extends Component {
     render() {
