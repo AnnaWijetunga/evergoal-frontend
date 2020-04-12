@@ -6,6 +6,12 @@ import { connect } from 'react-redux';
 import { fetchGoal } from '../actions/goalsActions';
 
 class ObjectivesContainer extends Component {
+
+    componentDidMount() {
+        this.props.fetchGoalObjectives(this.props.match.params.goalId)
+        this.props.fetchGoal(this.props.match.params.goalId)
+    }
+
     render() {
         const goalId = this.props.match.params.goalId 
 
