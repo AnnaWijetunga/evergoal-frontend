@@ -35,13 +35,13 @@ export const addGoal = goalInput => {
         body: JSON.stringify(goalInput)
     }
     return dispatch => {
-        fetch(`${ goalsURL }`, data)
-        .then(response => response.json())
-        .then(goal => dispatch({
-            type: 'CREATE_GOAL',
-            payload: goal 
-        }))
-        .catch(err => err)
+        fetch(`${goalsURL}`, data)
+            .then(response => response.json())
+            .then(goal => dispatch({
+                type: 'CREATE_GOAL',
+                payload: goal 
+            }))
+            .catch(err => err)
     }
 }
 
