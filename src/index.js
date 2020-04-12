@@ -38,4 +38,4 @@ document.getElementById('root')
 // Learn more about service workers: https://bit.ly/CRA-PWA
 
 // not sure yet
-// serviceWorker.unregister();
+// serviceWorker.register();
