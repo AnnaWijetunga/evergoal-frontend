@@ -20,7 +20,25 @@ export const fetchGoalObjectives = goalId => {
 }
 
 // create new objective
-
+export const addObjective = ( objectiveInput, goalId ) => {
+    let data = {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(objectiveInput)
+    }
+    return dispatch => {
+        fetch(`${ goalsURL }/${goalId}/objectives`, data)
+            .then(response => response.json())
+            .then(objective => {
+                let res = {objective, goalId}
+                dispatch({type: 'CREATE_OBJECTIVE', payload: res})
+            })
+            .catch(err => err)
+    }
+}
 
 // delete objective
 
