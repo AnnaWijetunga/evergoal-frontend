@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => ({
     fetchGoalObjectives: goalId => dispatch(fetchGoalObjectives(goalId)),
     fetchGoal: goalId => dispatch(fetchGoal(goalId)),
     addObjective: (objectiveInput, goalId) => dispatch(addObjective(objectiveInput, goalId)),
-    deleteObjective: objectiveId => dispatch(deleteObjective(ObjectiveId)),
+    deleteObjective: objectiveId => dispatch(deleteObjective(objectiveId)),
     toggleCompleted: objectiveId => dispatch(toggleCompleted(objectiveId))
 })
 
