@@ -18,7 +18,7 @@ export default function objectivesReducer(state = {
             return {...state, loading: false, objectivesData: state.objectivesData.filter(objective => objective.id !== action.payload.id)}
         case 'TOGGLE_COMPLETED_OBJECTIVE':
             console.log("toggling complete objective")
-            return {...state, objectivesData: [...state.objectivesData.map(objective => objective.id === action.payload.id ? {...objective, completed: !objective.completed} : objective)]}
+            return {...state, objectivesData: [...state.objectivesData.map(objective => objective.id === action.payload.id ? {...objective, completed: !objective.completed} : objective )]}
         default:
             console.log("default case in objective reducer")
             return state;
