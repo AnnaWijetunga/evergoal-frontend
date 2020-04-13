@@ -1,7 +1,8 @@
 // a function (not a class)
 // what we return or dispatch is an actionObject
 
-const goalsURL = "/api/goals";
+// const goalsURL = "/api/goals";
+const goalsURL = "http://localhost:3000/api/goals"
 
 // fetch all goals
 // thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
@@ -9,8 +10,11 @@ const goalsURL = "/api/goals";
 export const fetchGoals = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
+            // return fetch(goalsURL)
             return fetch(goalsURL)
+            // issue here
                 .then(response => response.json())
+                // seems to be that the goalsURL is pointing to my index.html - parsing something that isn't JSON as JSON
                 .then(goals => dispatch({type: 'FETCH_GOALS', payload: goals}))
     }
 }
