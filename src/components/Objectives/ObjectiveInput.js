@@ -21,12 +21,14 @@ class ObjectiveInput extends Component {
         })
     }
 
+    // old onChange: onChange={(event) => this.handleChange(event)}
+    // don't need to pass in event - it gets passed automatically for us
     render() {
         return(
             <Form inverted className="new-objective form" onSubmit={(event) => this.handleOnSubmit(event)}>
                 <Form.Field>
                     <label className="form-label">Add Objective</label>
-                    <input placeholder="List milestones to reach your goal" id="description" required value={this.state.description} onChange={(event) => this.handleChange(event)} />            
+                    <input placeholder="Actionable milestones to reach your goal" id="description" required value={this.state.description} onChange={this.handleChange} />            
                 </Form.Field>
 
                 <Button size='mini' type="submit">Submit</Button>
