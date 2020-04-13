@@ -8,16 +8,16 @@ const NavBar = () => {
             <NavLink to ="/"
                 exact 
                 activeStyle={{
-                    color: 'black'
+                    color: 'yellow'
                 }}>Home
             </NavLink>
 
-                <span> | </span>
+                <span>  |  </span>
             
             <NavLink to ="/goals"
                 exact 
                 activeStyle={{
-                    color: 'black'
+                    color: 'yellow'
                 }}>My Goals 
             </NavLink>
 
