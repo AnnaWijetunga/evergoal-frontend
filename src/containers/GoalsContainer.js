@@ -29,12 +29,14 @@ class GoalsContainer extends Component {
     }
 }
 
+// mapStateToProps: we want access to what's in the store
 const mapStateToProps = (state) => {
     return {
         goals: state.goals.goalsData
     }
 }
 
+// mapDispatchToProps: we want the ability to dispatch new actions to our store from our component
 const mapDispatchToProps = dispatch => ({
     fetchGoals: () => dispatch(fetchGoals()),
     deleteGoal: id => dispatch(deleteGoal(id))
