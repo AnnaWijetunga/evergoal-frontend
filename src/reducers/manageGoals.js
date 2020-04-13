@@ -1,5 +1,5 @@
 // a reducer is a function
-// what sends info to our reducer? a creator is sending a new action and creates an action
+// what sends info to our reducer? an action creator is sending a new action and creates an action
 
 // the first argument is state to set initial state
 // object with a goalsData key pointing to an empty array

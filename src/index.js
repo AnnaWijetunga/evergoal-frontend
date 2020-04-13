@@ -13,6 +13,7 @@ import { Provider } from 'react-redux';
 // we add compose here to combine middlewares - so we only pass in 1
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+// every time we update something in our store, these reducers return our updated state
 import rootReducer from './reducers/index';
 
 // import * as serviceWorker from './serviceWorker';
