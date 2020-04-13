@@ -8,6 +8,8 @@ import ObjectivesContainer from './ObjectivesContainer';
 import MainHeader from '../components/MainHeader';
 import { Container, Header } from 'semantic-ui-react';
 
+// because of { Route } we can display one component at a time - and the exact parameter means only that title/name will be rendered (example, / for Home)
+
 class Main extends Component {
     render() {
         return (
