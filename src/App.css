@@ -13,6 +13,12 @@
   color: rgb(5, 5, 5);
 }
 
+a {
+  color: rgb(10, 57, 158);
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .App-link {
   /*color: #61dafb;*/
   color: rgb(99, 97, 97);
@@ -32,7 +38,7 @@ div.goal, div.objectives-box {
 .new-goal-form {
   width: 45%;
   padding: 30px;
-  border-color: pink;
+  border-color: rgb(253, 252, 252);
   color: white;
   position: relative;
 }
