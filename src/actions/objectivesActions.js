@@ -1,4 +1,5 @@
-const goalsURL = "/api/goals";
+// const goalsURL = "/api/goals";
+const goalsURL = "http://localhost:3000/api/goals"
 
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
@@ -30,7 +31,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
         body: JSON.stringify(objectiveInput)
     }
     return dispatch => {
-        fetch(`${ goalsURL }/${goalId}/objectives`, data)
+        fetch(`${goalsURL}/${goalId}/objectives`, data)
             .then(response => response.json())
             .then(objective => {
                 let res = {objective, goalId}
@@ -50,7 +51,8 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`/objectives/${ id }`, data)
+        // fetch(`/objectives/${ id }`, data)
+        fetch(`${goalsURL}/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'DELETE_OBJECTIVE',
@@ -70,7 +72,8 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        fetch(`/api/objectives/${ id }`, data)
+        // fetch(`/api/objectives/${ id }`, data)
+        fetch(`${goalsURL}/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',
