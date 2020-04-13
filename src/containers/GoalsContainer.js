@@ -9,6 +9,7 @@ import GoalsHeader from '../components/Goals/GoalsHeader';
 class GoalsContainer extends Component {
 
     componentDidMount(){
+        // debugger
         this.props.fetchGoals()
     }
 
