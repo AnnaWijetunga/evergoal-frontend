@@ -1,3 +1,7 @@
+// CONTAINER COMPONENTS
+// usually class components, usually render other components
+// a neater way to organize: these components render the components in the Components folder
+
 import React, { Component } from 'react';
 import Goals from '../components/Goals/Goals';
 import GoalInput from '../components/Goals/GoalInput';
