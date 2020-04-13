@@ -16,7 +16,7 @@ class Main extends Component {
             <div>
                 <MainHeader />
                 <Container>
-                    <Header as='h3' className='tagline'>“A goal properly set is halfway reached.” —Zig Ziglar</Header>
+                    <Header as='h3' className='tagline'>Write It Down, Make It Happen</Header>
                     <NavBar />
 
                     <Container>
