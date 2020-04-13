@@ -17,9 +17,9 @@ const Objectives = (props) => {
     return (
         <div className="objectives-box">
             <h1>{props.goal.aim}</h1>
-            <label><strong>>The Plan</strong></label>
+            <label><strong>STRATEGY</strong></label>
             <p>{props.goal.strategy}</p>
-            <strong>Key Objectives</strong>
+            <strong>OBJECTIVES</strong>
             <ul>
                 {objectivesList}
             </ul>
