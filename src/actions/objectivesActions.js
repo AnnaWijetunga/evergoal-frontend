@@ -51,8 +51,8 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        //fetch(`/objectives/${ id }`, data)
-        fetch(`${goalsURL}/objectives/${ id }`, data)
+        fetch(`http://localhost:3000/objectives/${ id }`, data)
+        // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'DELETE_OBJECTIVE',
@@ -62,7 +62,7 @@ export const deleteObjective = id => {
     }
 }
 
-// toggle completed
+// toggle to mark an objective complete - or click again to uncheck it
 export const toggleCompleted = id => {
     let data = {
         method: 'PATCH',
@@ -72,9 +72,7 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        // fetch(`/api/objectives/${ id }`, data)
-        fetch(`${goalsURL}/objectives/${ id }`, data)
-        // fetch(`${goalsURL}/${goalId}/objectives/${ id }`, data)
+        fetch(`http://localhost:3000/api/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',
