@@ -7,7 +7,6 @@ export default class Objective extends Component {
         this.props.toggleCompleted(this.props.id)
     }
 
-    // need to fix edit function - not working right now
     render() {
         return(
             <div>
