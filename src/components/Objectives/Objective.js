@@ -14,7 +14,7 @@ export default class Objective extends Component {
                 
                 <Icon className="pointer" name='delete' color='red' onClick={() => this.props.deleteObjective(this.props.id)} />
                 
-                <Checkbox value={this.props.completed} checked={!!this.props.completed} onChange={(event) => this.handleCheck(event)} />{this.props.description}
+                <Checkbox value={this.props.completed} checked={!!this.props.completed} onChange={this.handleCheck} />{this.props.description}
             </div>
         )
     }
