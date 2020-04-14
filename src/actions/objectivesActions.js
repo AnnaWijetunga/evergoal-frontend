@@ -74,6 +74,7 @@ export const toggleCompleted = id => {
     return dispatch => {
         // fetch(`/api/objectives/${ id }`, data)
         fetch(`${goalsURL}/objectives/${ id }`, data)
+        // fetch(`${goalsURL}/${goalId}/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',
