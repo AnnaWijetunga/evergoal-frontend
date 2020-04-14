@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+You're reading the front end of Evergoal! Visit here for the back end: 
+
+https://github.com/AnnaWijetunga/evergoal-backend
+
 ## Available Scripts
 
 In the project directory, you can run:
