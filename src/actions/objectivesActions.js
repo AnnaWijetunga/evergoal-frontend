@@ -51,7 +51,8 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`/objectives/${ id }`, data)
+        //fetch(`/objectives/${ id }`, data)
+        fetch(`${goalsURL}/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'DELETE_OBJECTIVE',
@@ -71,7 +72,8 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        fetch(`/api/objectives/${ id }`, data)
+        // fetch(`/api/objectives/${ id }`, data)
+        fetch(`${goalsURL}/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',
