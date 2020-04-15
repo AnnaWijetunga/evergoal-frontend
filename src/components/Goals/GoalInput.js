@@ -12,6 +12,7 @@ class GoalInput extends Component {
     }
 
     // when someone types, we want to change our state
+    // telling this form to change the value inside the state upon input
     // pass in event as the parameter
     // abstracting here - id is being used for aim and strategy
     // brackets around [event.target.id]: evaluating what's inside, whether it's aim or strategy. First read the value associated and THEN set it as the proper key
@@ -21,6 +22,10 @@ class GoalInput extends Component {
         })
     }
 
+    // event handler
+    // b/c this data needs to go to our database
+    // importing { addGoal } above and passing that function directly to connect gives us access to the props: this.props.addGoal 
+    // event.preventDefault(); - means DON'T submit as per usual - we CARE about what is entered in those inputs and we want to use that info
     handleOnSubmit = (event) => {
         event.preventDefault();
         this.props.addGoal(this.state);
@@ -30,6 +35,9 @@ class GoalInput extends Component {
         })
     }
 
+    // instead of the form ontrolling the values, our React component needs control
+    // add a value to each input to give React component control
+    // 
     // original: onChange for aim
     // onChange={(event) => this.handleChange(event)} - don't have to pass in the event, it's passed automatically for me
     render() {
