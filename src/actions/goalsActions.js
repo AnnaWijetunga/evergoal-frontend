@@ -27,6 +27,7 @@ export const fetchGoal = id => {
 }
 
 // create new goal
+// JSON.stringify - from object to string
 export const addGoal = goalInput => {
     let data = {
         method: 'POST',
