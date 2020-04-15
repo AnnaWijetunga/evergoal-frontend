@@ -14,7 +14,7 @@ class GoalInput extends Component {
     // when someone types, we want to change our state
     // pass in event as the parameter
     // abstracting here - id is being used for aim and strategy
-    // brackets around [event.target.id]: evaluationg what's inside, whether it's aim or strategy. First read the value associated and THEN set it as the proper key
+    // brackets around [event.target.id]: evaluating what's inside, whether it's aim or strategy. First read the value associated and THEN set it as the proper key
     handleChange = (event) => {
         this.setState({
             [event.target.id]: event.target.value
@@ -34,7 +34,7 @@ class GoalInput extends Component {
     // onChange={(event) => this.handleChange(event)} - don't have to pass in the event, it's passed automatically for me
     render() {
         return(
-            <Form inverted className="new-goal-form" onSubmit={(event) => this.handleOnSubmit(event)}>
+            <Form inverted className="new-goal-form" onSubmit={this.handleOnSubmit}>
                 <h5>Set a New Goal</h5>
                 <Form.Field>
                     <label className="form-label">Aim</label>
@@ -53,6 +53,6 @@ class GoalInput extends Component {
 }
 
 // this component does not need access to what's already in the Redux store - null for mapStateToProps
-// this is only for adding something new - a new goal
+// this is only for adding something new - a new goal - and we want to dispatch this new action of adding a goal to our store from our component
 // we call that action creator - { addGoal } vs mapDispatchToProps
 export default connect(null, { addGoal })(GoalInput);
