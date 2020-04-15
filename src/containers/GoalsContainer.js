@@ -12,7 +12,7 @@ import GoalsHeader from '../components/Goals/GoalsHeader';
 
 class GoalsContainer extends Component {
 
-    // fetch request to our back end api - asynchronous
+    // fetch request to our back end api - asynchronous request
     componentDidMount(){
         // debugger
         this.props.fetchGoals()
