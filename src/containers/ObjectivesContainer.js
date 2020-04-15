@@ -14,7 +14,7 @@ class ObjectivesContainer extends Component {
     // accessing them through props inside this component
     // sending those objectives down to our objectives component
 
-    // this.props.match.params.goal.Id
+    // this.props.match.params.goalId
     // the library passes in a prop called match into every route that is rendered
     // inside this match object is another object called params
     // this holds all matching params where the key is the name we specified when creating the route and the value is the actual value in the URL
