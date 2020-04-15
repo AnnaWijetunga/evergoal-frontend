@@ -7,6 +7,17 @@ import { fetchGoal } from '../actions/goalsActions';
 
 class ObjectivesContainer extends Component {
 
+    // fetch requests to our back end api - asynchronous request
+    // we make a fetch request when the component mounts
+    // how do we access these objectives? this.props.fetchGoalObjectives
+    // getting the objectives from our Redux stor
+    // accessing them through props inside this component
+    // sending those objectives down to our objectives component
+
+    // this.props.match.params.goal.Id
+    // the library passes in a prop called match into every route that is rendered
+    // inside this match object is another object called params
+    // this holds all matching params where the key is the name we specified when creating the route and the value is the actual value in the URL
     componentDidMount() {
         this.props.fetchGoalObjectives(this.props.match.params.goalId)
         this.props.fetchGoal(this.props.match.params.goalId)
