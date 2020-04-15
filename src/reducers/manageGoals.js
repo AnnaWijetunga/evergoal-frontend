@@ -8,6 +8,9 @@
 // object with a goalsData key pointing to an empty array
 // object with a goalData key pointing to an empty array
 // the second argument is action
+
+// spread operator ...
+// spread operator helps to include existing goals AND add a new goal
 export default function goalsReducer(state = {
     loading: false,
     goalsData: [],
@@ -35,3 +38,9 @@ export default function goalsReducer(state = {
                 return state;
         }
 }
+
+// For example: FETCH_GOALS:
+// we are RETURNing a new version of that state
+// we don’t want goals to point to an empty array any longer
+// we now want it to point to our fetch request data: goalsData: action.payload
+// we are successfully updating our Redux store
