@@ -18,6 +18,7 @@ class ObjectivesContainer extends Component {
     // the library passes in a prop called match into every route that is rendered
     // inside this match object is another object called params
     // this holds all matching params where the key is the name we specified when creating the route and the value is the actual value in the URL
+    // this goal objectives component is reliant on the specific route we set up
     componentDidMount() {
         this.props.fetchGoalObjectives(this.props.match.params.goalId)
         this.props.fetchGoal(this.props.match.params.goalId)
