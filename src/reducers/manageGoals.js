@@ -2,7 +2,14 @@
 // reducers take in data (action and current state) and reduce it to a single object: the state
 // reducers are functions with a switch statement that returns a new state based on the action type sent
 // what sends info to our reducer? an action creator is sending a new action and creates an action
-// action object to reducer to state - the order
+// action object to reducer to updated state
+
+// the reducer below:
+// we set up a switch that handles 5 action types
+// we set the initial state
+// in LOADING_GOALS, loading becomes true 
+
+// in CREATE_GOAL, loading becomes false and goalsData is copied to a new object and goalsdata is set to the action.payload (the goal object, from our action creator)
 
 // the first argument is state to set initial state
 // object with a goalsData key pointing to an empty array
