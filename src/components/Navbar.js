@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+// when clicking on a link, link turns yellow to show it's active
 const NavBar = () => {
     return (
         <div className='navbar'>
