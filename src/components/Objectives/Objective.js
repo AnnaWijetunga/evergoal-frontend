@@ -3,10 +3,13 @@ import { Checkbox, Icon } from 'semantic-ui-react';
 
 export default class Objective extends Component {
 
+    // what starts the process for allowing our box (of an objective) to be checked off or unchecked
+    // helps make our form controlled vs uncontrolled
     handleCheck = () => {
         this.props.toggleCompleted(this.props.id)
     }
 
+    // started to make an edit button here but will need to postpone completion
     render() {
         return(
             <div>
