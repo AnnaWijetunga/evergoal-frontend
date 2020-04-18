@@ -13,8 +13,9 @@ const Goals = props => {
             key={goal.id} 
             goal={goal} 
             {...goal} 
-            deleteGoal={props.deleteGoal}/
-        >)
+            deleteGoal={props.deleteGoal}
+            // toggleComplete={props.toggleComplete}
+        />)
     return (
         <Container>
             {goalsList}
