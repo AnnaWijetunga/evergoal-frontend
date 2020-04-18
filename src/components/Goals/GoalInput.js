@@ -1,8 +1,7 @@
-// note to self (for Howard):
+// note to self (and for Howard):
 // I added a validation! 
 // line 49 const validated
-// line 65 - button disable if not validated
-
+// line 65 - button disabled if not validated
 
 // class component
 import React, { Component } from 'react';
