@@ -1,3 +1,8 @@
+// note to self (for Howard):
+// I added a validation! 
+// line 32 const validated
+// line 41 - button disabled if not validated
+
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
 
@@ -24,6 +29,8 @@ class ObjectiveInput extends Component {
     // old onChange: onChange={(event) => this.handleChange(event)}
     // don't need to pass in event - it gets passed automatically for us
     render() {
+        const validated = this.state.description.length > 2;
+
         return(
             <Form inverted className="new-objective form" onSubmit={(event) => this.handleOnSubmit(event)}>
                 <Form.Field>
@@ -31,7 +38,7 @@ class ObjectiveInput extends Component {
                     <input placeholder="Actionable milestones to reach your goal" id="description" required value={this.state.description} onChange={this.handleChange} />            
                 </Form.Field>
 
-                <Button size='mini' type="submit">Submit</Button>
+                <Button disabled={!validated} size='mini' type="submit">Submit</Button>
             </Form>
         )
     }
