@@ -1,3 +1,9 @@
+// note to self (for Howard):
+// I added a validation! 
+// line 49 const validated
+// line 65 - button disable if not validated
+
+
 // class component
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
@@ -41,6 +47,9 @@ class GoalInput extends Component {
     // original: onChange for aim
     // onChange={(event) => this.handleChange(event)} - don't have to pass in the event, it's passed automatically for me
     render() {
+        // testing out validations
+        const validated = this.state.aim.length > 2 && this.state.strategy.length > 2;
+
         return(
             <Form inverted className="new-goal-form" onSubmit={this.handleOnSubmit}>
                 <h5>Set a New Goal</h5>
@@ -54,7 +63,7 @@ class GoalInput extends Component {
                     <textarea placeholder="What's your plan?" required id="strategy" value={this.state.strategy} onChange={this.handleChange} />
                 </Form.Field>
 
-                <Button type="submit">Add Goal</Button>
+                <Button disabled={!validated} type="submit">Add Goal</Button>
             </Form>
         )
     }
