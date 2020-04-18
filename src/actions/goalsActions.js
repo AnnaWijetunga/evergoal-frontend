@@ -49,6 +49,26 @@ export const addGoal = goalInput => {
     }
 }
 
+// toggle to mark a goal complete
+// export const toggleComplete = id => {
+//     let data = {
+//         method: 'PATCH',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json'
+//         }
+//     }
+//     return dispatch => {
+//         fetch(`${goalsURL}/${id}`, data)
+//             .then(response => response.json())
+//             .then(goal => dispatch({
+//                 type: 'TOGGLE_COMPLETE_GOAL',
+//                 payload: goal
+//             }))
+//             .catch(err => err)
+//     }
+// }
+
 // delete goal
 export const deleteGoal = goal_id => {
     let data = {
