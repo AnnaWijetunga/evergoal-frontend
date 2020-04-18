@@ -37,6 +37,9 @@ export default function goalsReducer(state = {
             case 'FETCH_GOAL':
                 console.log("fetching 1 goal")
                 return {...state, loading: false, goalData: action.payload}
+            // case 'TOGGLE_COMPLETE_GOAL':
+            //     console.log("toggling complete goal")
+            //     return {...state, goalData: [...state.goalData.map(goal => goal.id === action.payload.id ? {...goal, completed: !goal.completed} : goal )]}
             case 'DELETE_GOAL':
                 console.log("in reducer, deleting", action.payload)
                 return {...state, loading: false, goalsData: state.goalsData.filter(goal => goal.id !== action.payload.id)}
