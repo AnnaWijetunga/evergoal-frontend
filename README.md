@@ -4,7 +4,7 @@ You're reading the front end of Evergoal! Visit here for the back end:
 
 https://github.com/AnnaWijetunga/evergoal-backend
 
-# Evergoal Video Walkthrough
+# Video Walkthrough
 
 Click here for a 1-minute walkthrough of Evergoal: https://vimeo.com/407732985
 
@@ -27,7 +27,7 @@ Fork and clone repo
     $ git clone https://github.com/AnnaWijetunga/evergoal-backend
     $ git clone https://github.com/AnnaWijetunga/evergoal-frontend
 
-Using two termainals, switch to each respective directory
+Using two terminals, switch to each respective directory
 
     $ cd evergoal-backend
     $ cd evergoal-frontend
@@ -44,11 +44,11 @@ Startup the server (within the front end terminal)
 
     $ npm start
 
-You may be prompted to use an alternate port - type Y or YES. Then a new browser window will open with Evergoal.
+You may be prompted to use an alternate port - type Y or YES. Then, a new browser window will open with Evergoal.
 
 ## Usage
 
-Welcome! Click My Goals, and there you will see the a form for setting a new goal. You will add the Aim (short title) and your Strategy (a sentence or two encapsulating how you'll attack this goal).
+Welcome! Click My Goals, and there you will see the a form for setting a new goal. You will add the Aim (short title) and your Strategy (a sentence or two encapsulating how you'll accomplish this goal).
 
 Click Add Goal to add the goal!
 
