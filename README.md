@@ -4,6 +4,10 @@ You're reading the front end of Evergoal! Visit here for the back end:
 
 https://github.com/AnnaWijetunga/evergoal-backend
 
+# Evergoal Video Walkthrough
+
+Click here for a 1-minute walkthrough of Evergoal: https://vimeo.com/407732985
+
 # Evergoal (front end)
 
 Evergoal was built using a Rails API back end, which the front end, built with Javascript (React/Redux), communicates with. 
