@@ -3,7 +3,7 @@ import { Button } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 
-const Goal = ({ aim, toggleComplete, deleteGoal, id }) => {
+const Goal = ({ aim, deleteGoal, id }) => {
     return(
         <div className="goal">
             <NavLink key={id} to={`/goals/${id}/objectives`}><h3>{aim}</h3></NavLink>
