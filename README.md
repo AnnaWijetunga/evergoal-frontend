@@ -1,6 +1,6 @@
 # EVERGOAL README
 
-You're reading the front end of Evergoal! Visit here for the back end: 
+You're reading the front end of Evergoal! Please click here for the back end: 
 
 https://github.com/AnnaWijetunga/evergoal-backend
 
@@ -10,7 +10,7 @@ Click here for a 1-minute walkthrough of Evergoal: https://vimeo.com/407732985
 
 # Evergoal (front end)
 
-Evergoal was built using a Rails API back end, which the front end, built with Javascript (React/Redux), communicates with. 
+Evergoal was built using a Rails API back end, which the front end, built with React and Redux, communicates with. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Evergoal is perfect for professionals who want to organize their personal and professional goals in one tidy place. This goal organizer can help keep you organized while also tracking goal progress over time.
 
-You can add a new goal, and within that goal, add new objectives to help keep your goal actionable. Once an objective is complete, you can check the box - complete! You can delete the entire goal, or any of the objectives, at any time.
+You can add a new goal, and within that goal, add many new objectives to help keep your goal actionable. Once an objective is complete, you can check the box - complete! You can delete the entire goal, or any of the objectives, at any time.
 
 ## Installation
 
