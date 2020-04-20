@@ -1,5 +1,5 @@
-// note to self (and for Howard):
-// I added a validation! 
+// note to self:
+// I added a validation!
 // line 49 const validated
 // line 65 - button disabled if not validated
 
