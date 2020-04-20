@@ -17,8 +17,6 @@ const Goal = ({ aim, deleteGoal, id }) => {
 
 export default Goal;
 
-
-
 // testing out a new format to incorportate an event listener
 // import React, { Component } from 'react';
 // import { Button } from 'semantic-ui-react';
