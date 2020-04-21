@@ -46,7 +46,7 @@ class GoalInput extends Component {
     // original: onChange for aim
     // onChange={(event) => this.handleChange(event)} - don't have to pass in the event, it's passed automatically for me
     render() {
-        // testing out validations
+        // validates that aim and strategy are longer than 2 characters, otherwise Add Goal button will be disabled
         const validated = this.state.aim.length > 2 && this.state.strategy.length > 2;
 
         return(
