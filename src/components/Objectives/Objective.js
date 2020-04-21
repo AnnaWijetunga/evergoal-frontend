@@ -9,11 +9,11 @@ export default class Objective extends Component {
         this.props.toggleCompleted(this.props.id)
     }
 
-    // started to make an edit button here but will need to postpone completion
+    // started to make an edit button here on line 16 - not complete
     render() {
         return(
             <div>
-                {/*  <Icon className="pointer" name='edit' color='blue' onClick={() => console.log("editing right now")} /> --> */}
+                <Icon className="pointer" name='edit' color='blue' onClick={() => console.log("editing")} />
                 
                 <Icon className="pointer" name='delete' color='red' onClick={() => this.props.deleteObjective(this.props.id)} />
                 
