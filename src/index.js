@@ -44,6 +44,7 @@ compose;
 const store = createStore(rootReducer,composeEnhancers(applyMiddleware(thunk)));
 
 // give app access to the store
+// the <Provider /> makes the Redux store available to any nested components that have been wrapped in the connect() function
 ReactDOM.render((   
   <Provider store={store}>
     <Router>
