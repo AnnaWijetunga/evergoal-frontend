@@ -13,6 +13,9 @@ import GoalsHeader from '../components/Goals/GoalsHeader';
 class GoalsContainer extends Component {
 
     // fetch request to our back end api - asynchronous request
+    // lifecycle method
+    // each component in React has a lifecycle which you can monitor and manipulate during its three main phases: mounting (putting elements into the DOM), updating, and unmounting
+    // componentDid Mount is called once the component is rendered
     componentDidMount(){
         // debugger
         this.props.fetchGoals()
