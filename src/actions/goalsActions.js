@@ -6,7 +6,7 @@ const goalsURL = "http://localhost:3000/api/goals"
 
 // fetch all goals
 // thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
-// reminder of fetch requests (scroll to bottom)
+// fetchGoals is ultimately returning the data structure of a FUNCTION, from lines 11 to 15
 export const fetchGoals = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
