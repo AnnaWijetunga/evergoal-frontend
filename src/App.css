@@ -20,7 +20,6 @@ a {
 }
 
 .App-link {
-  /*color: #61dafb;*/
   color: rgb(99, 97, 97);
 }
 
@@ -44,8 +43,9 @@ div.goal, div.objectives-box {
 }
 
 .new-objective-form {
-  width: 60%;
+  width: 50%;
   padding: 20px;
+  padding-bottom: 30px;
 }
 
 h3.ui.header.tagline {
@@ -61,7 +61,12 @@ body {
   background-color: #d1cdd0;
 }
 
-button.ui.red.mini.basic.button.delete-button {
+button.ui.red.mini.button.delete-button {
+  float: right;
+  margin-top: -20px;
+}
+
+button.ui.green.mini.button.complete-button {
   float: right;
   margin-top: -20px;
 }
