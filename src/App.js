@@ -1,3 +1,7 @@
+// typically, if a component is only rendering another component, best to combine
+// did not do that yet, but could be a nice to do for later
+// perhaps this component can cease to exist and we can import Main into index.js vs App
+
 import React, { Component } from 'react';
 
 // import css for App - header, form, links, buttons
