@@ -7,17 +7,18 @@
 // the reducer below:
 // we set up a switch that handles 5 action types
 // we set the initial state
-// in LOADING_GOALS, loading becomes true 
 
 // in CREATE_GOAL, loading becomes false and goalsData is copied to a new object and goalsdata is set to the action.payload (the goal object, from our action creator)
 
-// the first argument is state to set initial state
+// the first argument is state to set initial state (our default)
 // object with a goalsData key pointing to an empty array
 // object with a goalData key pointing to an empty array
 // the second argument is action
 
 // spread operator ...
 // spread operator helps to include existing goals AND add a new goal
+// when first run, we see @@INIT appear (in our Redux tools)
+// that "came from" me setting the default state in our goalsReducer, here below
 export default function goalsReducer(state = {
     loading: false,
     goalsData: [],
