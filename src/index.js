@@ -13,12 +13,11 @@ import './index.css';
 import App from './App';
 
 // allows us to configure routes that show only the components (vs ALL components at once) we specify on the page, depending on the route
-// App and any child component of app now has access to setting up routes and links inside any of those components
-// Router lets us set up routes associated with certain components, so the browser link will change.
+// App and any child component of app now has access to setting up routes and links inside any components
+// Router lets us set up routes associated with certain components, browser link changes
 import { BrowserRouter as Router} from 'react-router-dom';
 
 // Redux store setup below
-
 // any component that we wrap in Provider will have access to our Redux store
 import { Provider } from 'react-redux';
 
@@ -53,7 +52,3 @@ ReactDOM.render((
   </Provider>), 
 document.getElementById('root')
 );
-
-// we’ll send an action object to our reducer
-// reducer takes in action object and decides what we want to do update about our current store
-// reducer returns new version of that store
