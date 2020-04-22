@@ -2,6 +2,7 @@
 // I added a validation!
 // line 49 const validated
 // line 65 - button disabled if not validated
+// question for Howard: is this enough to prevent malicious code? is this protective enough?
 
 // class component
 import React, { Component } from 'react';

@@ -2,6 +2,7 @@
 // I added a validation! 
 // line 32 const validated
 // line 41 - button disabled if not validated
+// question for Howard: is this enough to prevent malicious code? is this protective enough
 
 import React, { Component } from 'react';
 import { Button, Form } from 'semantic-ui-react';
