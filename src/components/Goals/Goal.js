@@ -1,41 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 // complete button deletes the goal
+// prioritize button is front end only - does not persist to database
 const Goal = ({ aim, deleteGoal, id }) => {
+
+    const [count, setCount] = useState(0);
+
     return(
         <div className="goal">
-            <NavLink key={id} to={`/goals/${id}/objectives`}><h3>{aim}</h3></NavLink>
+            <NavLink key={id} to={`/goals/${id}/objectives`}><h3>{count}. {aim}</h3></NavLink>
             <Button className="delete-button" color='red' size='mini' onClick={() => deleteGoal(id)}>Delete</Button>
             <Button className="complete-button" color='green' size='mini' onClick={() => deleteGoal(id)}>Complete</Button>
+
+            <Button className="priority-button" color='yellow' size='mini' onClick={() => setCount(count + 1)}> Prioritize</Button>
+
         </div>
     )
 }
 
 export default Goal;
-
-// testing out a new format to incorportate an event listener
-// import React, { Component } from 'react';
-// import { Button } from 'semantic-ui-react';
-// import { NavLink } from 'react-router-dom';
-// import { Checkbox } from 'semantic-ui-react';
-
-// export default class Goal extends Component {
-
-//     handleCheck = () => {
-//         this.props.toggleComplete(this.props.id)
-//     }
-
-//     render() {
-//         return(
-//             <div className="goal">
-//                 <NavLink key={this.props.id} to={`/goals/${id}/objectives`}><h3>{this.props.aim}</h3></NavLink>
-
-//                 <Checkbox value={this.props.complete} checked={!!this.props.complete} onChange={this.handleCheck} />
-
-//                 <Button className="delete-button" basic color='red' size='mini' onClick={() => this.props.deleteGoal(this.props.id)}>Delete</Button>
-//             </div>
-//         )
-//     }
-// }
