@@ -1,10 +1,10 @@
-// const goalsURL = "/api/goals";
-const goalsURL = "http://localhost:3000/api/goals"
+
+// const goalsURL = "http://localhost:3000/api/goals"
 
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
     return dispatch => {
-        fetch(`${goalsURL}/${goalId}/objectives`)
+        fetch(`/${goalId}/objectives`) // removed hard-coded path
             .then(response => response.json())
             .then(objectives => {
                 let res = {
@@ -31,7 +31,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
         body: JSON.stringify(objectiveInput)
     }
     return dispatch => {
-        fetch(`${goalsURL}/${goalId}/objectives`, data)
+        fetch(`/${goalId}/objectives`, data) // removed hard-coded path
             .then(response => response.json())
             .then(objective => {
                 let res = {objective, goalId}
@@ -51,7 +51,7 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`http://localhost:3000/objectives/${ id }`, data)
+        fetch(`/objectives/${ id }`, data) // removed hard-coded path
         // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
@@ -72,7 +72,7 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        fetch(`http://localhost:3000/api/objectives/${ id }`, data)
+        fetch(`/api/objectives/${ id }`, data) // removed hard-coded path
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',

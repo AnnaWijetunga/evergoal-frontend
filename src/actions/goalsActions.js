@@ -1,8 +1,7 @@
 // a function (not a class)
 // what we return or dispatch is an actionObject
 
-// const goalsURL = "/api/goals";
-const goalsURL = "http://localhost:3000/api/goals"
+// const goalsURL = "http://localhost:3000/api/goals"
 
 // fetch all goals
 // thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
@@ -20,7 +19,7 @@ export const fetchGoals = () => {
 export const fetchGoal = id => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
-            return fetch(`${goalsURL}/${id}`)
+            return fetch(`/${id}`) // removed hard-coded path
                 .then(response => response.json())
                 .then(goal => dispatch({type: 'FETCH_GOAL', payload: goal}))
     }
@@ -79,7 +78,7 @@ export const deleteGoal = goal_id => {
         }
     }
     return dispatch => {
-        fetch(`${goalsURL}/${goal_id}`, data)
+        fetch(`/${goal_id}`, data) // removed hard-coded path
             .then(response => response.json())
             .then(goal => dispatch({
                 type: 'DELETE_GOAL',
