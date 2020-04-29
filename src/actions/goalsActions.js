@@ -19,7 +19,7 @@ export const fetchGoals = () => {
 export const fetchGoal = id => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
-            return fetch(`/${id}`) // removed hard-coded path
+            return fetch(`/api/goals/${id}`) // removed hard-coded path
                 .then(response => response.json())
                 .then(goal => dispatch({type: 'FETCH_GOAL', payload: goal}))
     }
@@ -78,7 +78,7 @@ export const deleteGoal = goal_id => {
         }
     }
     return dispatch => {
-        fetch(`/${goal_id}`, data) // removed hard-coded path
+        fetch(`/api/goals/${goal_id}`, data) // removed hard-coded path
             .then(response => response.json())
             .then(goal => dispatch({
                 type: 'DELETE_GOAL',

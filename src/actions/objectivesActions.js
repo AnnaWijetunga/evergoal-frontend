@@ -4,7 +4,7 @@
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
     return dispatch => {
-        fetch(`/${goalId}/objectives`) // removed hard-coded path
+        fetch(`/api/goals/${goalId}/objectives`) // removed hard-coded path
             .then(response => response.json())
             .then(objectives => {
                 let res = {
@@ -51,7 +51,7 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`/objectives/${ id }`, data) // removed hard-coded path
+        fetch(`/api/goals/objectives/${ id }`, data) // removed hard-coded path
         // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
