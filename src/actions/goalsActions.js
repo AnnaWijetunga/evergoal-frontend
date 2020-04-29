@@ -9,7 +9,7 @@
 export const fetchGoals = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
-            return fetch(goalsURL)
+            return fetch(`/api/goals`) // removed hard-coded path
                 .then(response => response.json())
                 .then(goals => dispatch({type: 'FETCH_GOALS', payload: goals}))
     }
@@ -38,7 +38,7 @@ export const addGoal = goalInput => {
     }
     return dispatch => {
         // debugger
-        fetch(`${ goalsURL }`, data)
+        fetch(`/api/goals`, data) // removed hard-coded path `${ goalsURL }`
             .then(response => response.json())
             .then(goal => dispatch({
                 type: 'CREATE_GOAL',
