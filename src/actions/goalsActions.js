@@ -1,7 +1,8 @@
 // a function (not a class)
 // what we return or dispatch is an actionObject
 
-// const goalsURL = "http://localhost:3000/api/goals"
+// replacing this to deploy to Heroku: const goalsURL = "http://localhost:3000/api/goals"
+const goalsURL = "api/goals"
 
 // fetch all goals
 // thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
@@ -9,7 +10,7 @@
 export const fetchGoals = () => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
-            return fetch(`/api/goals`) // removed hard-coded path
+            return fetch(goalsURL)
                 .then(response => response.json())
                 .then(goals => dispatch({type: 'FETCH_GOALS', payload: goals}))
     }
@@ -19,7 +20,7 @@ export const fetchGoals = () => {
 export const fetchGoal = id => {
     return (dispatch) => {
         dispatch({type: 'LOADING_GOALS'})
-            return fetch(`/api/goals/${id}`) // removed hard-coded path
+            return fetch(`${goalsURL}/${id}`)
                 .then(response => response.json())
                 .then(goal => dispatch({type: 'FETCH_GOAL', payload: goal}))
     }
@@ -38,7 +39,7 @@ export const addGoal = goalInput => {
     }
     return dispatch => {
         // debugger
-        fetch(`/api/goals`, data) // removed hard-coded path `${ goalsURL }`
+        fetch(`${ goalsURL }`, data)
             .then(response => response.json())
             .then(goal => dispatch({
                 type: 'CREATE_GOAL',
@@ -47,26 +48,6 @@ export const addGoal = goalInput => {
             .catch(err => err)
     }
 }
-
-// toggle to mark a goal complete
-// export const toggleComplete = id => {
-//     let data = {
-//         method: 'PATCH',
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json'
-//         }
-//     }
-//     return dispatch => {
-//         fetch(`${goalsURL}/${id}`, data)
-//             .then(response => response.json())
-//             .then(goal => dispatch({
-//                 type: 'TOGGLE_COMPLETE_GOAL',
-//                 payload: goal
-//             }))
-//             .catch(err => err)
-//     }
-// }
 
 // delete goal
 export const deleteGoal = goal_id => {
@@ -78,7 +59,7 @@ export const deleteGoal = goal_id => {
         }
     }
     return dispatch => {
-        fetch(`/api/goals/${goal_id}`, data) // removed hard-coded path
+        fetch(`${goalsURL}/${goal_id}`, data)
             .then(response => response.json())
             .then(goal => dispatch({
                 type: 'DELETE_GOAL',
