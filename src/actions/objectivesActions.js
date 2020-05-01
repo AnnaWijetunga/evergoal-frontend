@@ -1,10 +1,11 @@
+// const goalsURL = "http://localhost:3000/api/goals" - removed for Heroku
 
-// const goalsURL = "http://localhost:3000/api/goals"
+const goalsURL = "/api/goals";
 
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
     return dispatch => {
-        fetch(`/api/goals/${goalId}/objectives`) // removed hard-coded path
+        fetch(`${goalsURL}/${goalId}/objectives`)
             .then(response => response.json())
             .then(objectives => {
                 let res = {
@@ -31,7 +32,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
         body: JSON.stringify(objectiveInput)
     }
     return dispatch => {
-        fetch(`/${goalId}/objectives`, data) // removed hard-coded path
+        fetch(`${ goalsURL }/${goalId}/objectives`, data)
             .then(response => response.json())
             .then(objective => {
                 let res = {objective, goalId}
@@ -51,7 +52,7 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`/api/goals/objectives/${ id }`, data) // removed hard-coded path
+        fetch(`/objectives/${ id }`, data)
         // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
@@ -72,7 +73,7 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        fetch(`/api/objectives/${ id }`, data) // removed hard-coded path
+        fetch(`/api/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',
