@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 // prioritize button is front end only - does not persist to database
 const Goal = ({ aim, deleteGoal, id }) => {
 
-    const [count, setCount] = useState(0);
+    // const [count, setCount] = useState(0);
 
     return(
         <div className="goal">
@@ -14,7 +14,7 @@ const Goal = ({ aim, deleteGoal, id }) => {
             <Button className="delete-button" color='red' size='mini' onClick={() => deleteGoal(id)}>Delete</Button>
             <Button className="complete-button" color='green' size='mini' onClick={() => deleteGoal(id)}>Complete</Button>
 
-            <Button className="priority-button" color='yellow' size='mini' onClick={() => setCount(count + 1)}> Prioritize</Button>
+            {/* <Button className="priority-button" color='yellow' size='mini' onClick={() => setCount(count + 1)}> Prioritize</Button> */}
 
         </div>
     )
