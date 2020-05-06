@@ -2,7 +2,8 @@
 // what we return or dispatch is an actionObject
 
 // replacing this to deploy to Heroku: const goalsURL = "http://localhost:3000/api/goals"
-const goalsURL = "/api/goals";
+// const goalsURL = "/api/goals";
+const goalsURL = "https://evergoal-app.herokuapp.com/api/goals"
 
 // fetch all goals
 // thunk allows us to call dispatch on the inside of a creator action (vs how connect calls dispatch automatically)
