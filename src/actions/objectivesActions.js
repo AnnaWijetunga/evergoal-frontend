@@ -1,6 +1,8 @@
 // const goalsURL = "http://localhost:3000/api/goals" - removed for Heroku
 
-const goalsURL = "/api/goals";
+// const goalsURL = "/api/goals";
+
+const goalsURL = "https://evergoal-app.herokuapp.com/api/goals"
 
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
