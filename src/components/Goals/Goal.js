@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+// to use with hooks
+// import React, { useState } from 'react';
+
+import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
