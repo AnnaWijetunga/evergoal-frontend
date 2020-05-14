@@ -57,7 +57,7 @@ export const deleteObjective = id => {
         // original fetch
         // fetch(`/objectives/${ id }`, data)
 
-        fetch(`${goalsURL}/${goalId}/objectives/${ id }`, data)
+        fetch(`${goalsURL}/objectives/${ id }`, data)
 
         // /objectives/:id
             .then(response => response.json())
