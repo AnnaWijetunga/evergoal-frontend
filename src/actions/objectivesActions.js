@@ -54,7 +54,11 @@ export const deleteObjective = id => {
         }
     }
     return dispatch => {
-        fetch(`/objectives/${ id }`, data)
+        // original fetch
+        // fetch(`/objectives/${ id }`, data)
+
+        fetch(`${goalsURL}/${goalId}/objectives/${ id }`, data)
+
         // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
