@@ -56,8 +56,10 @@ export const deleteObjective = id => {
     return dispatch => {
         // original fetch
         // fetch(`/objectives/${ id }`, data)
+        // 405 error - not allowed
 
-        fetch(`/objectives/${ id }`, data)
+        fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
+        // fetch(`https://evergoal-app.herokuapp.com/api/goals/${ goalsId }/objectives/${ id }`, data)
 
         // /objectives/:id
             .then(response => response.json())
