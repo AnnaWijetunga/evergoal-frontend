@@ -2,6 +2,8 @@
 
 // const goalsURL = "/api/goals";
 
+// https://evergoal-app.herokuapp.com/api/goals/8/objectives/8
+
 const goalsURL = "https://evergoal-app.herokuapp.com/api/goals"
 
 // fetch goal objectives
@@ -55,10 +57,12 @@ export const deleteObjective = id => {
     }
     return dispatch => {
         // original fetch
-        // fetch(`/objectives/${ id }`, data)
+        fetch(`/objectives/${ id }`, data)
         // 405 error - not allowed
 
-        fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
+        // DELETE https://my-evergoal.herokuapp.com/objectives/6 405 (Not Allowed)
+
+        // fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
         // fetch(`https://evergoal-app.herokuapp.com/api/goals/${ goalsId }/objectives/${ id }`, data)
 
         // /objectives/:id
