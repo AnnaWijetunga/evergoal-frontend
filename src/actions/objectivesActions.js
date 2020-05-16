@@ -58,6 +58,9 @@ export const deleteObjective = id => {
     return dispatch => {
         // original fetch
         fetch(`/objectives/${ id }`, data)
+        
+        
+        // need to update this fetch url and not sure how
         // 405 error - not allowed
 
         // DELETE https://my-evergoal.herokuapp.com/objectives/6 405 (Not Allowed)
