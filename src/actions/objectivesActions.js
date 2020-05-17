@@ -56,7 +56,7 @@ export const deleteObjective = id => {
     }
     return dispatch => {
         // original fetch
-        fetch(goalsURL + `/objectives/${ id }`, data)
+        fetch(`/objectives/${ id }`, data)
         // `${goalsURL}/${goalId}/objectives`
         // originally worked without calling in the goals/goal id
         // does it have to do with how the api shows?
