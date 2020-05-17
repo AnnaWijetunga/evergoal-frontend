@@ -46,6 +46,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
 
 // delete objective
 export const deleteObjective = id => {
+
     let data = {
         method: 'DELETE',
         headers: {
@@ -53,6 +54,7 @@ export const deleteObjective = id => {
             'Content-Type': 'application/json'
         }
     }
+    debugger 
     return dispatch => {
         // original fetch
         fetch(`/objectives/${ id }`, data)
@@ -62,8 +64,8 @@ export const deleteObjective = id => {
 
         // DELETE https://my-evergoal.herokuapp.com/objectives/6 405 (Not Allowed)
 
-        // fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
-        // fetch(`https://evergoal-app.herokuapp.com/api/goals/${ goalsId }/objectives/${ id }`, data)
+        // a 405 code response confirms that the requested resource is valid and exists, but the client has used an unacceptable HTTP method during the request
+        // COULD be an incorrect URL
 
             .then(response => response.json())
             .then(objective => dispatch({
