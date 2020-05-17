@@ -2,8 +2,6 @@
 
 // const goalsURL = "/api/goals";
 
-// https://evergoal-app.herokuapp.com/api/goals/8/objectives/8
-
 const goalsURL = "https://evergoal-app.herokuapp.com/api/goals"
 
 // fetch goal objectives
@@ -57,19 +55,16 @@ export const deleteObjective = id => {
     }
     return dispatch => {
         // original fetch
-        fetch(`/objectives/${ id }`, data)
+        // fetch(`/objectives/${ id }`, data)
+        
         // originally worked without calling in the goals/goal id
         // does it have to do with how the api shows?
-        
-        // need to update this fetch url and not sure how
-        // 405 error - not allowed
 
         // DELETE https://my-evergoal.herokuapp.com/objectives/6 405 (Not Allowed)
 
-        // fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
+        fetch(`https://evergoal-app.herokuapp.com/api/goals/objectives/${ id }`, data)
         // fetch(`https://evergoal-app.herokuapp.com/api/goals/${ goalsId }/objectives/${ id }`, data)
 
-        // /objectives/:id
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'DELETE_OBJECTIVE',
