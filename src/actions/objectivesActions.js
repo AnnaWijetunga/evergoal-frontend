@@ -46,7 +46,7 @@ export const addObjective = ( objectiveInput, goalId ) => {
 
 // delete objective
 export const deleteObjective = id => {
-
+    
     let data = {
         method: 'DELETE',
         headers: {
@@ -54,11 +54,10 @@ export const deleteObjective = id => {
             'Content-Type': 'application/json'
         }
     }
-    debugger 
     return dispatch => {
         // original fetch
-        fetch(`/objectives/${ id }`, data)
-
+        fetch(goalsURL + `/objectives/${ id }`, data)
+        // `${goalsURL}/${goalId}/objectives`
         // originally worked without calling in the goals/goal id
         // does it have to do with how the api shows?
 
