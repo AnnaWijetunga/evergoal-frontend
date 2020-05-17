@@ -58,7 +58,8 @@ export const deleteObjective = id => {
     return dispatch => {
         // original fetch
         fetch(`/objectives/${ id }`, data)
-        
+        // originally worked without calling in the goals/goal id
+        // does it have to do with how the api shows?
         
         // need to update this fetch url and not sure how
         // 405 error - not allowed
