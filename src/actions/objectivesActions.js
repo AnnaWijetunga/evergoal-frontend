@@ -2,7 +2,12 @@
 
 // const goalsURL = "/api/goals";
 
-const goalsURL = "https://evergoal-app.herokuapp.com/api/goals"
+const PRODUCTION_BASE_URL = 'https://evergoal-app.herokuapp.com'
+// const DEVELOPMENT_BASE_URL = 'http://localhost:3001'
+
+const BASE_URL = document.location.hostname === 'my-evergoal.herokuapp.com' ? 
+PRODUCTION_BASE_URL : PRODUCTION_BASE_URL
+const goalsURL = `${BASE_URL}/api/goals`
 
 // fetch goal objectives
 export const fetchGoalObjectives = goalId => {
@@ -53,10 +58,10 @@ export const deleteObjective = id => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
-    }
+    } 
     return dispatch => {
         // original fetch
-        fetch(`/objectives/${ id }`, data)
+        fetch(`${BASE_URL}/objectives/${ id }`, data)
         // `${goalsURL}/${goalId}/objectives`
         // originally worked without calling in the goals/goal id
         // does it have to do with how the api shows?
@@ -85,7 +90,7 @@ export const toggleCompleted = id => {
         }
     }
     return dispatch => {
-        fetch(`/api/objectives/${ id }`, data)
+        fetch(`${BASE_URL}/api/objectives/${ id }`, data)
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'TOGGLE_COMPLETED_OBJECTIVE',

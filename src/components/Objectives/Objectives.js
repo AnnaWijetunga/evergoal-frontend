@@ -3,9 +3,9 @@ import Objective from './Objective';
 
 const Objectives = (props) => {
     const objectivesList = props.objectives.map(objective =>
-        <li className="objective-items">
+        <li className="objective-items" key={objective.id}>
             <Objective 
-                key={objective.id}
+                
                 id={objective.id}
                 completed={objective.completed}
                 description={objective.description}
