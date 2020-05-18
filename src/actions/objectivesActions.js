@@ -1,5 +1,4 @@
 // const goalsURL = "http://localhost:3000/api/goals" - removed for Heroku
-
 // const goalsURL = "/api/goals";
 
 const PRODUCTION_BASE_URL = 'https://evergoal-app.herokuapp.com'
@@ -62,15 +61,6 @@ export const deleteObjective = id => {
     return dispatch => {
         // original fetch
         fetch(`${BASE_URL}/objectives/${ id }`, data)
-        // `${goalsURL}/${goalId}/objectives`
-        // originally worked without calling in the goals/goal id
-        // does it have to do with how the api shows?
-
-        // DELETE https://my-evergoal.herokuapp.com/objectives/6 405 (Not Allowed)
-
-        // a 405 code response confirms that the requested resource is valid and exists, but the client has used an unacceptable HTTP method during the request
-        // COULD be an incorrect URL
-
             .then(response => response.json())
             .then(objective => dispatch({
                 type: 'DELETE_OBJECTIVE',
