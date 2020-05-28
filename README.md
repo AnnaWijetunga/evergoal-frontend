@@ -38,7 +38,7 @@ Startup the server (within the back end terminal)
 
 Enter in browser to launch the rails server
 
-    $  localhost:3000
+    $ localhost:3000
 
 Startup the server (within the front end terminal)
 
