@@ -4,7 +4,7 @@ Welcome! This is the front end of Evergoal. For the back end, you can click here
 
 https://github.com/AnnaWijetunga/evergoal-backend
 
-To see Evergoal live, you're welcome to click here:
+To see Evergoal live, you can click here:
 
 https://my-evergoal.herokuapp.com/
 
