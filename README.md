@@ -1,6 +1,6 @@
 # EVERGOAL README
 
-Welcome! This is the front end of Evergoal! Please click here for the back end: 
+Welcome! This is the front end of Evergoal. For the back end, you can click here: 
 
 https://github.com/AnnaWijetunga/evergoal-backend
 
